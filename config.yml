@@ -12,10 +12,10 @@ servers:
 listener:
 
   # The Motd which will be displayed in the server tab of a player and returned during ping
-  motd: PeritaCF
+  motd: ServerPVP
 
   # The name that is shown up in the player list (pause menu)
-  name: Perita
+  name: FULL PVP
 
   # The server priority list. If not changed by plugins, the proxy will connect the player to the first of those servers
   priorities:
