@@ -1,18 +1,18 @@
 enforce_secure_profile: false
 listeners:
-- query_port: 26131
-  motd: '&1Another Bungee server'
+- query_port: 25565
+  motd: '&1Perita Bungee Server'
   tab_list: GLOBAL_PING
   query_enabled: false
   proxy_protocol: false
   forced_hosts:
     pvp.md-5.net: pvp
   ping_passthrough: false
-  priorities:
-  - survival
+  priorities: #el servidor que pongas a qui es donde los usuarios apareceran cada ves que se unan a tu server
+  - lobby
   bind_local_address: true
-  host: 0.0.0.0:26131
-  max_players: 1
+  host: 0.0.0.0:25565
+  max_players: 1 #Esto solo es visual puedes ponerle la cantidad que quieras no afetara a la cantidad de usuarios que quieras que se unan a tu server
   tab_size: 60
   force_default_server: true
 remote_ping_cache: -1
@@ -31,11 +31,13 @@ connection_throttle_limit: 3
 server_connect_timeout: 5000
 timeout: 30000
 stats: ca70153c-b0be-4785-bce3-a1cf487bec99
-player_limit: 50
+player_limit: 50 #este si afectara a la cantidad de usuarios que quieras que se unan a tu server asi que ten cuidado!
 ip_forward: true
 groups:
-  ZeroTwo8518:
+  TuNickDelMine1: # a qui tienes que poner tu nombre de minecraft para tener permisos de admin
   - admin
+  #TuNickDelMine2:
+  #- admin
 remote_ping_timeout: 5000
 connection_throttle: 4000
 log_commands: false
@@ -44,12 +46,22 @@ online_mode: true
 forge_support: false
 disabled_commands:
 - disabledcommandhere
-servers:
+servers: #aqui podras agregar todos los servidores que quieras agregar a tu netwoork
   lobby:
+    motd: 'Mi servidor Java' #este es el nombre que tendra tu server siempre usara el nombre del servidor que establescas en priorities 
+    address: 127.0.0.1:25565
+    restricted: false
+    
+  survival:
     motd: none
     address: 127.0.0.1:25565
     restricted: false
-  survival:
-    motd: none
-    address: n1.cozecloud.in:25901
-    restricted: false
+    
+  #skyblock:
+    #motd: none
+    #address: 127.0.0.1:25565
+    #restricted: false
+    
+#todo lo que se configure a qui solo se podra ver en minecraft java
+#si gusta editar la config para usuarios de bedrock use el boton 
+#que dice "editar config de geysermc"
